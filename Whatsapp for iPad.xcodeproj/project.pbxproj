@@ -11,6 +11,7 @@
 		FE31A9D2283E2AAA00E7D4B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE31A9D1283E2AAA00E7D4B3 /* ContentView.swift */; };
 		FE31A9D4283E2AAB00E7D4B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE31A9D3283E2AAB00E7D4B3 /* Assets.xcassets */; };
 		FE31A9D7283E2AAB00E7D4B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE31A9D6283E2AAB00E7D4B3 /* Preview Assets.xcassets */; };
+		FEB197F2283E2B05008D304A /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = FEB197F1283E2B05008D304A /* BetterSafariView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEB197F2283E2B05008D304A /* BetterSafariView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "Whatsapp for iPad";
+			packageProductDependencies = (
+				FEB197F1283E2B05008D304A /* BetterSafariView */,
+			);
 			productName = "Whatsapp for iPad";
 			productReference = FE31A9CC283E2AAA00E7D4B3 /* Whatsapp for iPad.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = FE31A9C3283E2AAA00E7D4B3;
+			packageReferences = (
+				FEB197F0283E2B05008D304A /* XCRemoteSwiftPackageReference "BetterSafariView" */,
+			);
 			productRefGroup = FE31A9CD283E2AAA00E7D4B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FEB197F0283E2B05008D304A /* XCRemoteSwiftPackageReference "BetterSafariView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stleamist/BetterSafariView.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FEB197F1283E2B05008D304A /* BetterSafariView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEB197F0283E2B05008D304A /* XCRemoteSwiftPackageReference "BetterSafariView" */;
+			productName = BetterSafariView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FE31A9C4283E2AAA00E7D4B3 /* Project object */;
 }

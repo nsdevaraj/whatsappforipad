@@ -1,21 +1,36 @@
-//
-//  ContentView.swift
-//  Whatsapp for iPad
-//
-//  Created by DEVARAJ N S on 5/25/22.
-//
-
 import SwiftUI
+import BetterSafariView
 
 struct ContentView: View {
+    @State private var presentingSafariView = false
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        SafariView(
+            url: URL(string: "https://web.whatsapp.com/")!,
+            configuration: SafariView.Configuration(
+                entersReaderIfAvailable: false,
+                barCollapsingEnabled: true
+            )
+        )
+        .preferredBarAccentColor(.clear)
+        .preferredControlAccentColor(.accentColor)
+        .dismissButtonStyle(.done)
+        .offset(x: 0, y: -88)
+        Button(action: {
+            self.presentingSafariView = true
+        }) {
+            Text("Buy me a Coffee ☕ !!")
+        }
+        .safariView(isPresented: $presentingSafariView) {
+            SafariView(
+                url: URL(string: "https://www.buymeacoffee.com/nsdevaraj")!,
+                configuration: SafariView.Configuration(
+                    entersReaderIfAvailable: false,
+                    barCollapsingEnabled: true
+                )
+            )
+            .preferredBarAccentColor(.clear)
+            .preferredControlAccentColor(.accentColor)
+            .dismissButtonStyle(.done)
+        }
     }
 }
